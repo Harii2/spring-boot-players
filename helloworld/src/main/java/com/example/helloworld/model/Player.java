@@ -1,10 +1,25 @@
 package com.example.helloworld.model;
 
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="player")
 public class Player {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int playerId;
+    @Column(name="name")
     private String name;
+    @Column(name = "jerseynumber")
     private int jerseyNumber;
+    @Column(name = "role")
     private String role ;
+
+    public Player(){
+        
+    }
 
     public Player(int id,String name,int no,String role){
         this.playerId = id;

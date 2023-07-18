@@ -2,7 +2,7 @@ package com.example.helloworld.controller;
 
 import java.util.*;
 import com.example.helloworld.model.Player;
-import com.example.helloworld.service.PlayerH2Service;
+import com.example.helloworld.service.PlayerJpaService;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 @RestController
 public class PlayerController {
     @Autowired 
-    private PlayerH2Service playerService ;
+    private PlayerJpaService playerService ;
 
     @GetMapping("/hello")
     public String getHello(){
